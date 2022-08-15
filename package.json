@@ -2,10 +2,14 @@
   "name": "algoexpert",
   "version": "1.0.0",
   "description": "solving AlgoExpert.io's questions",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tswatch": "npx tsc -w",
+    "nodewatch": "node -w ",
+    "dev": "concurrently --kill-others \"npm run tswatch\" \"npm run nodewatch\""
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Philippe Fanaro",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.3.0"
+  }
 }

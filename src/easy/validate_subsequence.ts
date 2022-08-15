@@ -10,7 +10,8 @@ const isValidSubsequence = (array: number[], sequence: number[]): boolean => {
     if (typeof indSeqNum === "number") {
       sliceableArray = sliceableArray.slice(indSeqNum, sliceableArray.length);
 
-    console.log(sliceableArray)
+      console.log(sliceableArray);
+
       checkedSeqNumbers.push(true);
       if (checkedSeqNumbers.length === sequence.length) return true;
     } else {
@@ -24,5 +25,4 @@ const isValidSubsequence = (array: number[], sequence: number[]): boolean => {
 const array1: number[] = [5, 1, 22, 25, 6, -1, 8, 10];
 const sequence1: number[] = [1, 6, 10, -1];
 
-console.log(isValidSubsequence(array1, sequence1))
-
+console.log(isValidSubsequence(array1, sequence1));
