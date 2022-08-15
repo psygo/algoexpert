@@ -17,6 +17,7 @@ const isValidSubsequence = (array: number[], sequence: number[]): boolean => {
       );
 
       checkedSeqNumbers.push(true);
+
       if (checkedSeqNumbers.length === sequence.length) return true;
     } else {
       return false;
