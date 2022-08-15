@@ -1,0 +1,11 @@
+{
+  "name": "algoexpert",
+  "version": "1.0.0",
+  "description": "solving AlgoExpert.io's questions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
