@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "solving AlgoExpert.io's questions",
   "scripts": {
-    "tswatch": "npx tsc -w",
-    "nodewatch": "node -w ",
-    "dev": "concurrently --kill-others \"npm run tswatch\" \"npm run nodewatch\""
+    "ts:watch": "npx tsc -w",
+    "nodemon:watch": "npx nodemon .\\dist\\easy\\validate_subsequence.js",
+    "dev": "concurrently --kill-others \"npm run ts:watch\" \"npm run nodemon:watch\""
   },
   "author": "Philippe Fanaro",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^7.3.0"
+    "concurrently": "^7.3.0",
+    "nodemon": "^2.0.19"
   }
 }

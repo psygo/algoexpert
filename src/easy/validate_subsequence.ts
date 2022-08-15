@@ -1,3 +1,5 @@
+import { expect, test } from "../infra/infra";
+
 const isValidSubsequence = (array: number[], sequence: number[]): boolean => {
   let sliceableArray: number[] = array;
   const checkedSeqNumbers: boolean[] = [];
@@ -7,10 +9,12 @@ const isValidSubsequence = (array: number[], sequence: number[]): boolean => {
       (n: number) => n === seqNum
     );
 
-    if (typeof indSeqNum === "number") {
-      sliceableArray = sliceableArray.slice(indSeqNum, sliceableArray.length);
-
-      console.log(sliceableArray);
+    // findIndex gives back -1 if the number isn't in it.
+    if (indSeqNum !== -1) {
+      sliceableArray = sliceableArray.slice(
+        indSeqNum + 1,
+        sliceableArray.length
+      );
 
       checkedSeqNumbers.push(true);
       if (checkedSeqNumbers.length === sequence.length) return true;
@@ -23,6 +27,8 @@ const isValidSubsequence = (array: number[], sequence: number[]): boolean => {
 };
 
 const array1: number[] = [5, 1, 22, 25, 6, -1, 8, 10];
-const sequence1: number[] = [1, 6, 10, -1];
+const sequence1: number[] = [1, 6, -1];
 
-console.log(isValidSubsequence(array1, sequence1));
+test("Sample test", () => {
+  expect(isValidSubsequence(array1, sequence1), true);
+});
