@@ -1,4 +1,4 @@
-import { expect, test } from "../infra/infra";
+import { expect, test } from "../infra/test";
 
 const isValidSubsequence = (array: number[], sequence: number[]): boolean => {
   let sliceableArray: number[] = [...array];

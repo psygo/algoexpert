@@ -1,4 +1,4 @@
-import { expect, test } from "../infra/infra";
+import { expect, test } from "../infra/test";
 
 export const riverSizes = (matrix: number[][]): number[] => {
   let matrixCopy = JSON.parse(JSON.stringify(matrix));
