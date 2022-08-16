@@ -1,13 +1,16 @@
 import { arrayExpect, test } from "../infra/test";
 
-export const riverSizes = (matrix: number[][]): number[] => {
-  let matrixCopy = JSON.parse(JSON.stringify(matrix));
+type Matrix = number[][];
+
+export const riverSizes = (matrix: Matrix): number[] => {
+  let matrixCopy: Matrix = JSON.parse(JSON.stringify(matrix));
+  const riverSizes: number[] = [];
 
   console.log(matrixCopy);
-  return [-1];
+  return riverSizes;
 };
 
-const matrix1: number[][] = [
+const matrix1: Matrix = [
   [1, 0, 0, 1, 0],
   [1, 0, 1, 0, 0],
   [0, 0, 1, 0, 1],

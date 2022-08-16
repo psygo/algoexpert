@@ -18,7 +18,7 @@ export const shallowExpect = (left: any, right: any): void => {
   console.log(left === right);
 };
 
-export const arrayExpect = (leftArray: any, rightArray: any): void => {
+export const arrayExpect = (leftArray: any[], rightArray: any[]): void => {
   let areEqual: boolean = true;
   const leftArrayLength: number = leftArray.length;
   const rightArrayLength: number = rightArray.length;
