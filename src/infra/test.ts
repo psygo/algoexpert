@@ -14,6 +14,25 @@ export const test = (description: string, testFunc: TestFunc): void => {
   console.log("-".repeat(dashNum));
 };
 
-export const expect = (left: any, right: any): void => {
+export const shallowExpect = (left: any, right: any): void => {
   console.log(left === right);
+};
+
+export const arrayExpect = (leftArray: any, rightArray: any): void => {
+  let areEqual: boolean = true;
+  const leftArrayLength: number = leftArray.length;
+  const rightArrayLength: number = rightArray.length;
+
+  if (leftArrayLength !== rightArrayLength) {
+    console.log(false);
+  } else {
+    for (let i: number = 0; i < leftArrayLength; i++) {
+      if (leftArray[i] !== rightArray[i]) {
+        areEqual = false;
+        break;
+      }
+    }
+
+    console.log(areEqual);
+  }
 };

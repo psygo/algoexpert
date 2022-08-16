@@ -1,4 +1,4 @@
-import { expect, test } from "../infra/test";
+import { shallowExpect, test } from "../infra/test";
 
 const isValidSubsequence = (array: number[], sequence: number[]): boolean => {
   let sliceableArray: number[] = [...array];
@@ -33,5 +33,5 @@ const array1: number[] = [5, 1, 22, 25, 6, -1, 8, 10];
 const sequence1: number[] = [1, 6, -1];
 
 test("Validate Sequence", () => {
-  expect(isValidSubsequence(array1, sequence1), true);
+  shallowExpect(isValidSubsequence(array1, sequence1), true);
 });

@@ -1,4 +1,4 @@
-import { expect, test } from "../infra/test";
+import { arrayExpect, test } from "../infra/test";
 
 export const riverSizes = (matrix: number[][]): number[] => {
   let matrixCopy = JSON.parse(JSON.stringify(matrix));
@@ -16,6 +16,8 @@ const matrix1: number[][] = [
 ];
 const out1: number[] = [1, 2, 2, 2, 5];
 
+const orderNormalization = (a: number, b: number) => a - b;
+
 test("River Sizes", () => {
-  expect(riverSizes(matrix1), out1);
+  arrayExpect(riverSizes(matrix1).sort(orderNormalization), out1);
 });

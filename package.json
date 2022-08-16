@@ -12,5 +12,9 @@
   "devDependencies": {
     "concurrently": "^7.3.0",
     "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "@types/chai": "^4.3.3",
+    "chai": "^4.3.6"
   }
 }
