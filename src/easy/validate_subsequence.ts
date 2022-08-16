@@ -1,7 +1,9 @@
 import { expect, test } from "../infra/infra";
 
 const isValidSubsequence = (array: number[], sequence: number[]): boolean => {
-  let sliceableArray: number[] = array;
+  let sliceableArray: number[] = [...array];
+  sliceableArray[0] = 10000;
+
   const checkedSeqNumbers: boolean[] = [];
 
   for (const seqNum of sequence) {
@@ -30,6 +32,6 @@ const isValidSubsequence = (array: number[], sequence: number[]): boolean => {
 const array1: number[] = [5, 1, 22, 25, 6, -1, 8, 10];
 const sequence1: number[] = [1, 6, -1];
 
-test("Sample test", () => {
+test("Validate Sequence", () => {
   expect(isValidSubsequence(array1, sequence1), true);
 });

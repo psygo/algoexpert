@@ -4,7 +4,7 @@
   "description": "solving AlgoExpert.io's questions",
   "scripts": {
     "ts:watch": "npx tsc -w",
-    "nodemon:watch": "npx nodemon .\\dist\\easy\\validate_subsequence.js",
+    "nodemon:watch": "npx nodemon ./dist/medium/river_sizes.js",
     "dev": "concurrently --kill-others \"npm run ts:watch\" \"npm run nodemon:watch\""
   },
   "author": "Philippe Fanaro",
