@@ -3,11 +3,26 @@ import { arrayExpect, test } from "../infra/test";
 type Matrix = number[][];
 
 export const riverSizes = (matrix: Matrix): number[] => {
-  let matrixCopy: Matrix = JSON.parse(JSON.stringify(matrix));
-  const riverSizes: number[] = [];
+  const rowsLength: number = matrix.length;
+  const columnsLenght: number = matrix.length;
+  const rivers: number[][][] = [];
+  const visited: Matrix = [];
 
-  console.log(matrixCopy);
-  return riverSizes;
+  for (let i: number = 0; i < rowsLength; i++) {
+    for (let j: number = 0; j < columnsLenght; j++) {
+      const currentEl: number[] = [i, j];
+      if (matrix[i][j] === 1) {
+        const newRiver: Matrix = [currentEl];
+        visited.push(currentEl)
+        
+        //
+        rivers.push(newRiver);
+      }
+    }
+  }
+
+  console.log(rivers);
+  return [-1];
 };
 
 const matrix1: Matrix = [
