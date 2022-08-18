@@ -12,18 +12,13 @@ const isValidSubsequence = (array: number[], sequence: number[]): boolean => {
     );
 
     // findIndex gives back -1 if the number isn't in it.
-    if (indSeqNum !== -1) {
-      sliceableArray = sliceableArray.slice(
-        indSeqNum + 1,
-        sliceableArray.length
-      );
+    if (indSeqNum === -1) return false;
 
-      checkedSeqNumbers.push(true);
+    sliceableArray = sliceableArray.slice(indSeqNum + 1, sliceableArray.length);
 
-      if (checkedSeqNumbers.length === sequence.length) return true;
-    } else {
-      return false;
-    }
+    checkedSeqNumbers.push(true);
+
+    if (checkedSeqNumbers.length === sequence.length) return true;
   }
 
   return false;
