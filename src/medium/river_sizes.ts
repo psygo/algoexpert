@@ -2,7 +2,7 @@ import { arrayExpect, test } from "../infra/test";
 
 type Matrix = number[][];
 
-export const riverSizes = (matrix: Matrix): number[] => {
+const riverSizes = (matrix: Matrix): number[] => {
   const rowsLength: number = matrix.length;
   const columnsLenght: number = matrix.length;
   const rivers: number[][][] = [];
@@ -13,8 +13,8 @@ export const riverSizes = (matrix: Matrix): number[] => {
       const currentEl: number[] = [i, j];
       if (matrix[i][j] === 1) {
         const newRiver: Matrix = [currentEl];
-        visited.push(currentEl)
-        
+        visited.push(currentEl);
+
         //
         rivers.push(newRiver);
       }
