@@ -4,7 +4,7 @@ type Matrix = number[][];
 type CellCoords = [number, number];
 type River = CellCoords[];
 
-const riverSizes = (matrix: Matrix): number[] => {
+export const riverSizes = (matrix: Matrix): number[] => {
   const rowsLength: number = matrix.length;
   const colsLenght: number = matrix[0].length;
   const rivers: River[] = [];
