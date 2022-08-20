@@ -1,17 +1,9 @@
-// import * as chai from "chai";
+import * as chai from "chai";
+import { twoNumberSum } from "./two_number_sum";
 
-// import { twoNumberSum } from "./two_number_sum";
-
-// const array1: number[] = [3, 5, -4, 8, 11, 1, -1, 6];
-// const targetSum = 10;
-
-describe("Two Number Sum", () => {
-  it("Two Number Sum", () => {
-    expect(1).toEqual(1);
-    // chai.expect(twoNumberSum(array1, targetSum)).to.deep.equal(true);
-  });
+it("Test Case #1", function () {
+  const output = twoNumberSum([3, 5, -4, 8, 11, 1, -1, 6], 10);
+  chai.expect(output.length === 2).to.deep.equal(true);
+  chai.expect(output.includes(11)).to.deep.equal(true);
+  chai.expect(output.includes(-1)).to.deep.equal(true);
 });
-
-// customTest("Two Number Sum", () => {
-//   shallowExpect(twoNumberSum(array1, targetSum), [-1, 11]);
-// });

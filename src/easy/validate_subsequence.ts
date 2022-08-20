@@ -1,6 +1,7 @@
-import { shallowExpect, customTest } from "../infra/infra";
-
-const isValidSubsequence = (array: number[], sequence: number[]): boolean => {
+export const isValidSubsequence = (
+  array: number[],
+  sequence: number[]
+): boolean => {
   let sliceableArray: number[] = [...array];
   sliceableArray[0] = 10000;
 
@@ -23,10 +24,3 @@ const isValidSubsequence = (array: number[], sequence: number[]): boolean => {
 
   return false;
 };
-
-const array1: number[] = [5, 1, 22, 25, 6, -1, 8, 10];
-const sequence1: number[] = [1, 6, -1];
-
-customTest("Validate Subsequence", () => {
-  shallowExpect(isValidSubsequence(array1, sequence1), true);
-});
