@@ -5,13 +5,12 @@
   "scripts": {
     "ts:watch": "npx tsc -w",
     "nodemon:watch": "npx nodemon ./dist/easy/two_number_sum.js",
-    "test": "npx jest --watch ./dist/",
-    "dev": "concurrently --kill-others \"npm run ts:watch\" \"npm run nodemon:watch\""
+    "test:watch": "npx jest --watch ./dist/",
+    "dev": "concurrently --kill-others \"npm run ts:watch\" \"npm run test:watch\""
   },
   "author": "Philippe Fanaro",
   "license": "ISC",
   "devDependencies": {
-    "@types/babel__core": "^7.1.19",
     "@types/chai": "^4.3.3",
     "@types/jest": "^28.1.7",
     "chai": "^4.3.6",
