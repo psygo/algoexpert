@@ -1,0 +1,9 @@
+{
+    "files.exclude": {
+        // JS | TS | Packages
+        "./node_modules/": true,
+        "package-lock.json": true,
+        // Others
+        "files.eol": "\r\n",
+    }
+}

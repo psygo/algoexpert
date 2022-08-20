@@ -1,4 +1,4 @@
-import { arrayExpect, test } from "../infra/test";
+import { arrayExpect, customTest } from "../infra/infra";
 
 type Matrix = number[][];
 type CellCoords = [number, number];
@@ -62,12 +62,12 @@ const out2: number[] = [1, 1, 2, 2, 5, 21];
 
 const orderNormalization = (a: number, b: number) => a - b;
 
-test("River Sizes", () => {
+customTest("River Sizes", () => {
   const riverSizes1: number[] = riverSizes(matrix1).sort(orderNormalization);
   arrayExpect(riverSizes1, out1);
 });
 
-test("River Sizes", () => {
+customTest("River Sizes", () => {
   const riverSizes2: number[] = riverSizes(matrix2).sort(orderNormalization);
   arrayExpect(riverSizes2, out2);
 });

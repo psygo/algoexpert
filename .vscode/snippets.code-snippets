@@ -1,0 +1,24 @@
+{
+    "console.log": {
+        "prefix": "csl",
+        "body": "console.log($1);"
+    },
+    "Jest's Describe": {
+        "prefix": "test_desc",
+        "body": [
+            "describe(\"$1\", () => {",
+            "  it(\"$2\", () => {",
+            "    $3",
+            "  });",
+            "});"
+        ]
+    },
+    "Add Private Function": {
+        "prefix": "pfunc",
+        "body": [
+            "private $1 = ($2): $3 => {",
+            "  $4",
+            "};"
+        ]
+    }
+}

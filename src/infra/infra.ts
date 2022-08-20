@@ -1,6 +1,6 @@
 type TestFunc = () => void;
 
-export const test = (description: string, testFunc: TestFunc): void => {
+export const customTest = (description: string, testFunc: TestFunc): void => {
   const dashNum: number = 40;
 
   console.log("-".repeat(dashNum));
