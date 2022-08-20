@@ -15,16 +15,16 @@ export const test = (description: string, testFunc: TestFunc): void => {
 };
 
 export const shallowExpect = (left: any, right: any): void => {
-  console.log(left === right);
+  console.log(`Is the left equal to the right?\n${left === right}`);
 };
 
-export const arrayExpect = (leftArray: any[], rightArray: any[]): void => {
+export const arrayExpect = <T>(leftArray: T[], rightArray: T[]): void => {
   let areEqual: boolean = true;
   const leftArrayLength: number = leftArray.length;
   const rightArrayLength: number = rightArray.length;
 
   if (leftArrayLength !== rightArrayLength) {
-    console.log(false);
+    console.log(`Arrays are not even of equal length`);
   } else {
     for (let i: number = 0; i < leftArrayLength; i++) {
       if (leftArray[i] !== rightArray[i]) {
@@ -33,6 +33,6 @@ export const arrayExpect = (leftArray: any[], rightArray: any[]): void => {
       }
     }
 
-    console.log(areEqual);
+    console.log(`Arrays are equal?\n${areEqual}`);
   }
 };
