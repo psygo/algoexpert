@@ -4,7 +4,10 @@ type Length = number;
 // 1
 // With a dual for-loop, we get C(n, 2) = n(n-1)/2 -> O(n^2)
 // Time: O(n^2) | Space: O(1)
-export const twoNumberSum = (array: number[], targetSum: number) => {
+export const twoNumberSum = (
+  array: number[],
+  targetSum: number
+): [number, number] | [] => {
   const length: Length = array.length;
 
   for (let i: Index = 0; i < length; i++) {
@@ -19,7 +22,10 @@ export const twoNumberSum = (array: number[], targetSum: number) => {
 // 2
 // Most efficient version: Hash Table + Equation
 // Time: O(n) | Space: O(n) (registering on the hash table)
-export const twoNumberSumHash = (array: number[], targetSum: number) => {
+export const twoNumberSumHash = (
+  array: number[],
+  targetSum: number
+): [number, number] | [] => {
   const numsTable: Map<number, boolean> = new Map();
 
   for (const num of array) {
