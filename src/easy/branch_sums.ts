@@ -59,8 +59,6 @@ export const branchSums = (root: BinaryTree): number[] => {
   };
 
   calculateBranchSums(root, 0, sums);
-  
-  console.log(sums);
 
   return sums;
 };
