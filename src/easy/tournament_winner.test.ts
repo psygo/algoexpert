@@ -15,7 +15,7 @@ describe("Tournament Winner", () => {
     chai.expect(actual).to.deep.equal(expected);
   });
 
-  it("Test Case #1", () => {
+  it("Test Case #2", () => {
     const competitions: Competition[] = [
       ["HTML", "Java"],
       ["Java", "Python"],

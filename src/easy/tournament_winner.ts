@@ -1,15 +1,16 @@
 type Team = string;
-type HomeTeam = string;
-type AwayTeam = string;
+type HomeTeam = Team;
+type AwayTeam = Team;
 export type Competition = [HomeTeam, AwayTeam];
 export type Result = 0 | 1;
-type Winner = string;
+type Winner = Team;
 type Points = number;
 
 type Index = number;
 type Length = number;
 
-// O(N) T | O(N) S
+// Assuming competitions are fixed arrays,
+// O(N) T | O(K) S (benefits of using a map)
 export const tournamentWinner = (
   competitions: Competition[],
   results: Result[]
@@ -35,6 +36,8 @@ export const tournamentWinner = (
       : pointsTable.set(awayTeam, currentAwayTeamPoints + 3);
 
     currentAmountOfPoints += 3;
+
+    // Improvement: Could have incorporated the best team here and into the map
   }
 
   let winner: Team;
