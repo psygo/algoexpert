@@ -4,6 +4,7 @@ type Change = number;
 type Index = number;
 type Length = number;
 
+// (That's such a subtle thing to catch...)
 // O(nlogn) T | O(1) S (if ordered in-place, otherwise O(N))
 export const nonConstructibleChangeTim = (coins: Coin[]): Change => {
   const orderedCoins: Coin[] = coins.sort((a: Coin, b: Coin) => a - b);
@@ -44,12 +45,10 @@ export const nonConstructibleChange = (coins: Coin[]): Change => {
 
   const biggestChange: Change = sumCombinations[sumCombinations.length - 1];
   for (let c: Change = 1; c < biggestChange; c++) {
+    // if (c in sumCombinations) return c;
     // Why the fuck is this assertion not working???
+    // Anyway, here is a synonym:
     if (sumCombinations.filter((v: Change) => v === c).length === 0) return c;
-    // if ((c in sumCombinations)) {
-    //   console.log(c)
-    //   // return c;
-    // }
   }
 
   return biggestChange + 1;
