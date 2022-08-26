@@ -4,6 +4,20 @@ type Change = number;
 type Index = number;
 type Length = number;
 
+// O(nlogn) T | O(1) S (if ordered in-place, otherwise O(N))
+export const nonConstructibleChangeTim = (coins: Coin[]): Change => {
+  const orderedCoins: Coin[] = coins.sort((a: Coin, b: Coin) => a - b);
+
+  let currentChangeCreated: number = 0;
+  for (const coin of orderedCoins) {
+    if (coin > currentChangeCreated + 1) return currentChangeCreated + 1;
+
+    currentChangeCreated += coin;
+  }
+
+  return currentChangeCreated + 1;
+};
+
 // O(N^2) T | O(N^2) S
 export const nonConstructibleChange = (coins: Coin[]): Change => {
   const numberOfCoins: Length = coins.length;
@@ -28,13 +42,14 @@ export const nonConstructibleChange = (coins: Coin[]): Change => {
     sumCombinations.push(newCoin, ...newCombinations);
   }
 
-  console.log(sumCombinations);
-
   const biggestChange: Change = sumCombinations[sumCombinations.length - 1];
-  for (let c: Change = 0; c <= biggestChange; c++) {
-    // console.log(c);
-    // console.log(c in sumCombinations);
-    if (!(c in sumCombinations)) return c;
+  for (let c: Change = 1; c < biggestChange; c++) {
+    // Why the fuck is this assertion not working???
+    if (sumCombinations.filter((v: Change) => v === c).length === 0) return c;
+    // if ((c in sumCombinations)) {
+    //   console.log(c)
+    //   // return c;
+    // }
   }
 
   return biggestChange + 1;
