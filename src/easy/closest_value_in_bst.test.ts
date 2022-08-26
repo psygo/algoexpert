@@ -1,17 +1,5 @@
 import * as chai from "chai";
-import { findClosestValueInBst } from "./closest_value_in_bst";
-
-class BST {
-  value: number;
-  left: BST | null;
-  right: BST | null;
-
-  constructor(value: number) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
-  }
-}
+import { BST, findClosestValueInBst } from "./closest_value_in_bst";
 
 it("Test Case #1", function () {
   const root = new BST(10);

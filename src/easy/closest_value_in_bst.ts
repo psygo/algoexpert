@@ -1,4 +1,4 @@
-class BST {
+export class BST {
   value: number;
   left: BST | null;
   right: BST | null;
@@ -10,6 +10,6 @@ class BST {
   }
 }
 
-export function findClosestValueInBst(tree: BST, target: number) {
+export const findClosestValueInBst = (tree: BST, target: number): number => {
   return -1;
-}
+};
