@@ -16,7 +16,6 @@ export const tournamentWinner = (
   results: Result[]
 ): Winner => {
   const numberOfCompetitions: Length = results.length;
-  let currentAmountOfPoints: Points = 0;
   const pointsTable: Map<Team, Points> = new Map<Team, Points>();
 
   for (let i: Index = 0; i < numberOfCompetitions; i++) {
@@ -34,8 +33,6 @@ export const tournamentWinner = (
     currentResult === 1
       ? pointsTable.set(homeTeam, currentHomeTeamPoints + 3)
       : pointsTable.set(awayTeam, currentAwayTeamPoints + 3);
-
-    currentAmountOfPoints += 3;
 
     // Improvement: Could have incorporated the best team here and into the map
   }

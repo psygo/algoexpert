@@ -1,4 +1,4 @@
-import { arrayExpect, customTest } from "../infra/infra";
+// import { arrayExpect, customTest } from "../infra/infra";
 
 type Matrix<T> = T[][];
 type CellCoords = [number, number];
@@ -125,32 +125,32 @@ export const riverSizes = (matrix: Matrix<number>): Length[] => {
 //   return riverSizes;
 // };
 
-const matrix1: Matrix<number> = [
-  [1, 0, 0, 1, 0],
-  [1, 0, 1, 0, 0],
-  [0, 0, 1, 0, 1],
-  [1, 0, 1, 0, 1],
-  [1, 0, 1, 1, 0],
-];
-const out1: number[] = [1, 2, 2, 2, 5];
+// const matrix1: Matrix<number> = [
+//   [1, 0, 0, 1, 0],
+//   [1, 0, 1, 0, 0],
+//   [0, 0, 1, 0, 1],
+//   [1, 0, 1, 0, 1],
+//   [1, 0, 1, 1, 0],
+// ];
+// const out1: number[] = [1, 2, 2, 2, 5];
 
-const matrix2: Matrix<number> = [
-  [1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0],
-  [1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0],
-  [0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1],
-  [1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0],
-  [1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1],
-];
-const out2: number[] = [1, 1, 2, 2, 5, 21];
+// const matrix2: Matrix<number> = [
+//   [1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0],
+//   [1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0],
+//   [0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1],
+//   [1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0],
+//   [1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1],
+// ];
+// const out2: number[] = [1, 1, 2, 2, 5, 21];
 
-const orderNormalization = (a: number, b: number) => a - b;
+// const orderNormalization = (a: number, b: number) => a - b;
 
-customTest("River Sizes", () => {
-  const riverSizes1: number[] = riverSizes(matrix1).sort(orderNormalization);
-  arrayExpect(riverSizes1, out1);
-});
+// customTest("River Sizes", () => {
+//   const riverSizes1: number[] = riverSizes(matrix1).sort(orderNormalization);
+//   arrayExpect(riverSizes1, out1);
+// });
 
-customTest("River Sizes", () => {
-  const riverSizes2: number[] = riverSizes(matrix2).sort(orderNormalization);
-  arrayExpect(riverSizes2, out2);
-});
+// customTest("River Sizes", () => {
+//   const riverSizes2: number[] = riverSizes(matrix2).sort(orderNormalization);
+//   arrayExpect(riverSizes2, out2);
+// });

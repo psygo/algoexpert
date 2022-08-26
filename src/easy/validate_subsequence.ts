@@ -1,4 +1,4 @@
-import { shallowExpect, customTest } from "../infra/infra";
+// import { shallowExpect, customTest } from "../infra/infra";
 
 type Index = number;
 type Length = number;
@@ -48,9 +48,9 @@ export const isValidSubsequenceClem = (
   return seqIdx === sequenceLength;
 };
 
-const array1: number[] = [5, 1, 22, 25, 6, -1, 8, 10];
-const sequence1: number[] = [1, 6, -1];
+// const array1: number[] = [5, 1, 22, 25, 6, -1, 8, 10];
+// const sequence1: number[] = [1, 6, -1];
 
-customTest("Validate Subsequence", () => {
-  shallowExpect(isValidSubsequence(array1, sequence1), true);
-});
+// customTest("Validate Subsequence", () => {
+//   shallowExpect(isValidSubsequence(array1, sequence1), true);
+// });
