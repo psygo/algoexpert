@@ -10,6 +10,20 @@ export class BST {
   }
 }
 
+// There will always only be one value in the tree.
+// O(N) T | O(1) S
 export const findClosestValueInBst = (tree: BST, target: number): number => {
-  return -1;
+  let currentClosestValue: number = tree.value;
+
+  const recursiveExplore = (tree: BST): void => {
+    if (Math.abs(tree.value - target) < Math.abs(currentClosestValue - target))
+      currentClosestValue = tree.value;
+
+    if (tree.left) recursiveExplore(tree.left);
+    if (tree.right) recursiveExplore(tree.right);
+  };
+
+  recursiveExplore(tree);
+
+  return currentClosestValue;
 };
