@@ -1,5 +1,5 @@
 import * as chai from "chai";
-import { BST, findClosestValueInBst } from "./closest_value_in_bst";
+import { BST, findClosestValueInBst } from "./find_closest_value_in_bst";
 
 it("Test Case #1", function () {
   const root = new BST(10);
