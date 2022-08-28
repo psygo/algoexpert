@@ -1,4 +1,4 @@
-class BinaryTree {
+export class BinaryTree {
   value: number;
   left: BinaryTree | null;
   right: BinaryTree | null;
@@ -10,7 +10,8 @@ class BinaryTree {
   }
 }
 
-export function nodeDepths(root: BinaryTree) {
-  return -1;
-}
+export const nodeDepths = (root: BinaryTree): number => {
+  console.log(root);
 
+  return -1;
+};

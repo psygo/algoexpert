@@ -1,17 +1,6 @@
 import * as chai from "chai";
-import { nodeDepths } from "./node_depths";
 
-class BinaryTree {
-  value: number;
-  left: BinaryTree | null;
-  right: BinaryTree | null;
-
-  constructor(value: number) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
-  }
-}
+import { BinaryTree, nodeDepths } from "./node_depths";
 
 describe("Node Depths", () => {
   it("Test Case #1", function () {

@@ -1,6 +1,7 @@
 {
   "name": "algoexpert",
   "version": "1.0.0",
+  "author": "Philippe Fanaro",
   "description": "solving AlgoExpert.io's questions",
   "scripts": {
     "ts:watch": "npx tsc -w",
@@ -8,7 +9,6 @@
     "test:watch": "npx jest --watch ./dist/",
     "dev": "concurrently --kill-others \"npm run ts:watch\" \"npm run test:watch\""
   },
-  "author": "Philippe Fanaro",
   "license": "ISC",
   "devDependencies": {
     "@types/chai": "^4.3.3",

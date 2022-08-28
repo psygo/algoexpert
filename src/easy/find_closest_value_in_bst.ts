@@ -30,23 +30,25 @@ export const findClosestValueInBst = (tree: BST, target: number): number => {
   return currentClosestValue;
 };
 
+// I think I mistranslated this...
+// it seems to end up in an infinite loop...
 // O(logn) T (if unbalanced: O(N)
 // O(logn) S (if recursion, otherwise O(1) if iteratively)
-export const findClosestValueInBstClem = (
-  tree: BST,
-  target: number
-): number => {
-  let closest: number = tree.value;
-  let currentNode: BST | null = tree;
+// export const findClosestValueInBstClem = (
+//   tree: BST,
+//   target: number
+// ): number => {
+//   let closest: number = tree.value;
+//   let currentNode: BST | null = tree;
 
-  while (currentNode) {
-    if (!currentNode) return closest;
-    else if (Math.abs(target - closest) > Math.abs(target - currentNode.value))
-      closest = currentNode.value;
-    else if (target < currentNode.value) currentNode = tree.left;
-    else if (target > currentNode.value) currentNode = tree.right;
-    else break;
-  }
+//   while (currentNode) {
+//     if (!currentNode) return closest;
+//     else if (Math.abs(target - closest) > Math.abs(target - currentNode.value))
+//       closest = currentNode.value;
+//     else if (target < currentNode.value) currentNode = tree.left;
+//     else if (target > currentNode.value) currentNode = tree.right;
+//     else break;
+//   }
 
-  return closest;
-};
+//   return closest;
+// };
