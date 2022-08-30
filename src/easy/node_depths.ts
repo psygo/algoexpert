@@ -14,6 +14,7 @@ type Node = BinaryTree;
 type Depth = number;
 
 // O(N) T | O(N) S
+// Could have been O(H) S, (H = tree height)
 export const nodeDepths = (root: BinaryTree): number => {
   let nodesOnCurrentLayer: Node[] = [root];
   let nodesOnNextLayer: Node[] = [];
