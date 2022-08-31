@@ -4,9 +4,9 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Debug Plain",
             "type": "node",
             "request": "launch",
-            "name": "Debug AlgoExpert",
             "skipFiles": [
                 "<node_internals>/**"
             ],
@@ -20,6 +20,27 @@
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
             ]
-        }
+        },
+        // From https://stackoverflow.com/a/72872275/4756173
+        {
+            "name": "Debug with Jest",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/jest",
+            "args": [
+                "${fileBasenameNoExtension}",
+                "--runInBand",
+                "--watch",
+                "--coverage=false",
+                "--no-cache"
+            ],
+            "cwd": "${workspaceRoot}",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "sourceMaps": true,
+            "windows": {
+                "program": "${workspaceFolder}/node_modules/jest/bin/jest"
+            }
+        },
     ]
 }

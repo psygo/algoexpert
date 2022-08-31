@@ -13,6 +13,7 @@ export class Node {
   }
 
   depthFirstSearch(array: string[]) {
+    console.log("hello");
     return array;
   }
 }
