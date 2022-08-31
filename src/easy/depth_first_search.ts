@@ -12,9 +12,10 @@ export class Node {
     return this;
   }
 
-  // O(V+E) T | O(V) S
+  // O(V + E) T | O(V) S
   depthFirstSearch(array: string[]) {
     array.push(this.name);
+    
     for (const child of this.children) child.depthFirstSearch(array);
 
     return array;
