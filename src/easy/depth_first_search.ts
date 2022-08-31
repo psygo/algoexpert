@@ -12,8 +12,11 @@ export class Node {
     return this;
   }
 
+  // O(V+E) T | O(V) S
   depthFirstSearch(array: string[]) {
-    console.log("hello");
+    array.push(this.name);
+    for (const child of this.children) child.depthFirstSearch(array);
+
     return array;
   }
 }
