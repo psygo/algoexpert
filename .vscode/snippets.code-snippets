@@ -1,4 +1,12 @@
 {
+    "shebang": {
+        "prefix": "shebang",
+        "body": [
+            "#!/bin/sh",
+            "",
+            "${1}"
+        ]
+    },
     "console.log": {
         "prefix": "csl",
         "body": "console.log($1);"
