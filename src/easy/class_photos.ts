@@ -3,7 +3,7 @@ type Height = number;
 type Length = number;
 type Index = number;
 
-// O(nlogn) T | O(n) S
+// O(nlogn) T | O(1) S (if we can sort in place)
 export const classPhotos = (
   redShirtHeights: Height[],
   blueShirtHeights: Height[]
@@ -21,10 +21,9 @@ export const classPhotos = (
   const back: Height[] =
     orderedRed[0] > orderedBlue[0] ? orderedRed : orderedBlue;
 
-  const aheadWorks: boolean[] = [];
-  for (let i: Index = 0; i < length; i++) {
-    aheadWorks.push(ahead[i] < back[i] ? true : false);
-  }
+  let aheadWorks: boolean = true;
+  for (let i: Index = 0; i < length; i++)
+    aheadWorks = aheadWorks && ahead[i] < back[i] ? true : false;
 
-  return aheadWorks.reduce((p: boolean, c: boolean) => p && c);
+  return aheadWorks;
 };
