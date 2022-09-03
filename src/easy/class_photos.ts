@@ -3,6 +3,7 @@ type Height = number;
 type Length = number;
 type Index = number;
 
+// O(nlogn) T | O(n) S
 export const classPhotos = (
   redShirtHeights: Height[],
   blueShirtHeights: Height[]
