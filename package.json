@@ -7,6 +7,7 @@
     "ts:watch": "npx tsc -w",
     "nodemon:watch": "npx nodemon ./dist/easy/two_number_sum.js",
     "test:watch": "npx jest --watch ./dist/",
+    "boilerplate": "sh ./src/infra/boilerplate.sh",
     "dev": "concurrently --kill-others \"npm run ts:watch\" \"npm run test:watch\""
   },
   "license": "ISC",
