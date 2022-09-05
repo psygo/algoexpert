@@ -1,5 +1,5 @@
 import * as chai from "chai";
-import { getNthFib, getNthFibMemoized } from "./nth_fibonacci";
+import { getNthFib, getNthFibFixed, getNthFibMemoized } from "./nth_fibonacci";
 
 describe("Nth Fibonacci", () => {
   it("Test Case #1", function () {
@@ -24,5 +24,9 @@ describe("Nth Fibonacci", () => {
 
   it("Memoized | Test Case #1", function () {
     chai.expect(getNthFibMemoized(6)).to.deep.equal(5);
+  });
+
+  it("Fixed | Test Case #1", function () {
+    chai.expect(getNthFibFixed(6)).to.deep.equal(5);
   });
 });
