@@ -12,24 +12,21 @@ export default class LinkedList {
 export const removeDuplicatesFromLinkedList = (
   linkedList: LinkedList
 ): LinkedList => {
-  let current = linkedList;
-  let next = linkedList.next;
-  while (true) {
-    if (next === null) break;
-    else {
-      if (current.value === next.value) {
-        if (next.next === null) {
-          current.next = null;
-          next = null;
-        } else {
-          current.next = next.next;
-          next = current.next;  
-        }
-      }
-      else {
-        current = next;
+  let current: LinkedList = linkedList;
+  let next: LinkedList | null = linkedList.next;
+
+  while (next !== null) {
+    if (current.value === next.value) {
+      if (next.next === null) {
+        current.next = null;
+        next = null;
+      } else {
+        current.next = next.next;
         next = current.next;
       }
+    } else {
+      current = next;
+      next = current.next;
     }
   }
 
