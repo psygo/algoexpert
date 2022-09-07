@@ -2,6 +2,10 @@ type Index = number;
 type Length = number;
 
 // O(logn) T | O(1) S
+// One of the ugliest pieces of code I've ever written,
+// that's what you get when you're tired...
+// It would have been much simpler if I had used *one* middle point
+// instead of two.
 export const binarySearch = (array: number[], target: number): number => {
   let currentLength: Length = array.length;
 
