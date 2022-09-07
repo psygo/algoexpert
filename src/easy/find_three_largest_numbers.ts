@@ -1,3 +1,3 @@
-export function findThreeLargestNumbers(array: number[]): [] {
+export const findThreeLargestNumbers = (array: number[]): number[] => {
   return [];
-}
+};
