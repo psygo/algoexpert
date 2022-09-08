@@ -2,11 +2,11 @@ type Index = number;
 type Length = number;
 
 // O(n^2) T | O(1) S
-// It would have been better to create a while loop with an isSorted variable
-// giving out false if it ever enters the if...
 export const bubbleSort = (array: number[]): number[] => {
   const length: Length = array.length;
   let isSorted: boolean = false;
+  // Each bubble sort complete for completely sorts the last item:
+  let counter: number = 0; 
 
   while (!isSorted) {
     isSorted = true;
@@ -24,6 +24,8 @@ export const bubbleSort = (array: number[]): number[] => {
         isSorted = false;
       }
     }
+    
+    counter++;
   }
 
   return array;
