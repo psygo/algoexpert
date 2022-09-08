@@ -2,6 +2,8 @@ type Index = number;
 type Length = number;
 
 // O(n^2) T | O(1) S
+// It would have been better to create a while loop with an isSorted variable
+// giving out false if it ever enters the if...
 export const bubbleSort = (array: number[]): number[] => {
   const length: Length = array.length;
 
