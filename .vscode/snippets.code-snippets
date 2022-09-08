@@ -11,6 +11,30 @@
         "prefix": "csl",
         "body": "console.log($1);"
     },
+    "console.log dashes": {
+        "prefix": "csld",
+        "body": "console.log(\"--------------------------------------\");"
+    },
+    "console.log dashes log": {
+        "prefix": "csldl",
+        "body": [
+            "console.log(\"--------------------------------------\");",
+            "console.log($1)",
+            "console.log(\"--------------------------------------\");"
+        ]
+    },
+    "type Index": {
+        "prefix": "type_index",
+        "body": "type Index = number;"
+    },
+    "type Length": {
+        "prefix": "type_length",
+        "body": "type Length = number;"
+    },
+    "My For": {
+        "prefix": "my_for",
+        "body": "for (let i: Index = 0; i < length; i++) {$1}"
+    },
     "Jest's Describe": {
         "prefix": "test_desc",
         "body": [

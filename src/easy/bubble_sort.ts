@@ -6,7 +6,6 @@ export const bubbleSort = (array: number[]): number[] => {
   const length: Length = array.length;
   let isSorted: boolean = false;
   // Each bubble sort complete for completely sorts the last item:
-  let counter: number = 0; 
 
   while (!isSorted) {
     isSorted = true;
@@ -24,8 +23,6 @@ export const bubbleSort = (array: number[]): number[] => {
         isSorted = false;
       }
     }
-    
-    counter++;
   }
 
   return array;

@@ -2,9 +2,8 @@ type Index = number;
 type Length = number;
 
 // O(n) T | O(1)
-// (ideally, but if there's no efficient way to add to strings, then O(n^2),
-//  because then we would have to put letters in an array and then rebuild a
-//  string from it)
+// In the way I'm doing it below, it's actually O(n^2)
+// It could be O(n) if stored the new letters in an array and then joined.
 export const caesarCipherEncryptor = (string: string, key: number): string => {
   const length: Length = string.length;
   let ciphered: string = "";
