@@ -1,5 +1,5 @@
 import * as chai from "chai";
-import { generateDocument } from "./generate_documnet";
+import { generateDocument } from "./generate_document";
 
 describe("Generate Document", () => {
   it("Test Case #1", function () {
