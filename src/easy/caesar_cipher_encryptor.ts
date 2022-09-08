@@ -2,7 +2,7 @@ type Index = number;
 type Length = number;
 
 // O(n) T | O(1)
-// (ideally, but if there's no efficient way to add to strings, then O(n),
+// (ideally, but if there's no efficient way to add to strings, then O(n^2),
 //  because then we would have to put letters in an array and then rebuild a
 //  string from it)
 export const caesarCipherEncryptor = (string: string, key: number): string => {
