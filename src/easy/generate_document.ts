@@ -1,15 +1,17 @@
 type Index = number;
 type Length = number;
-type Frequency = number;
 
-// O(n) T | O(n) S
+type Frequency = number;
+type FreqMap = Map<string, Frequency>;
+
+// O(n+m) (= O(max(n, m))?) T | O(c) S (c = unique characters)
 export const generateDocument = (
   characters: string,
   document: string
 ): boolean => {
-  const frequencyMap = (s: string): Map<string, Frequency> => {
+  const frequencyMap = (s: string): FreqMap => {
     const length: Length = s.length;
-    const freqMap: Map<string, Frequency> = new Map();
+    const freqMap: FreqMap = new Map();
 
     for (let i: Index = 0; i < length; i++) {
       const currentLetter: string = s[i];
@@ -22,8 +24,8 @@ export const generateDocument = (
     return freqMap;
   };
 
-  const availableChars: Map<string, Frequency> = frequencyMap(characters);
-  const charsInDocument: Map<string, Frequency> = frequencyMap(document);
+  const availableChars: FreqMap = frequencyMap(characters);
+  const charsInDocument: FreqMap = frequencyMap(document);
 
   let isPossible: boolean = true;
   for (const [letter, frequency] of charsInDocument) {
