@@ -1,6 +1,7 @@
 type Index = number;
 type Length = number;
 
+// O(n) T | O(n) S
 export const runLengthEncoding = (string: string): string => {
   const length: Length = string.length;
   const encoded: string[] = [];
@@ -9,14 +10,6 @@ export const runLengthEncoding = (string: string): string => {
   let cacheCounter: number = 1;
   for (let i: Index = 1; i < length; i++) {
     const nextLetter: string = string[i];
-
-    console.log("--------------------------------------");
-    console.log(string[i]);
-    console.log(encoded);
-    console.log(cache);
-    console.log(cacheCounter);
-    console.log(cache !== nextLetter);
-    console.log("--------------------------------------");
 
     if (cache !== nextLetter || (cache === nextLetter && cacheCounter === 9)) {
       encoded.push(`${cacheCounter}${cache}`);
