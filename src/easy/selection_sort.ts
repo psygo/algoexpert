@@ -11,12 +11,11 @@ export const selectionSort = (array: number[]): number[] => {
 
     let newMin: number = inf;
     let newMinIndex: Index;
-    for (let j: Index = i + 1; j < length; j++) {
+    for (let j: Index = i + 1; j < length; j++)
       if (array[j] < newMin) {
         newMin = array[j];
         newMinIndex = j;
       }
-    }
 
     if (newMin < current) {
       const temp: number = array[i];
