@@ -1,10 +1,40 @@
-type Index = number;
+// type Index = number;
 type Length = number;
 
 type Tuplet = [number, number] | [];
 type Triplet = [number, number, number];
 
+// O(n^2) T | O(n) S
 export const threeNumberSum = (
+  array: number[],
+  targetSum: number
+): Triplet[] => {
+  array.sort((a, b) => a - b);
+  const length: Length = array.length;
+  const triplets: Triplet[] = [];
+
+  for (let i = 0; i < length - 2; i++) {
+    let left = i + 1;
+    let right = length - 1;
+
+    while (left < right) {
+      const currentSum = array[i] + array[left] + array[right];
+      if (currentSum === targetSum) {
+        triplets.push([array[i], array[left], array[right]]);
+        left++;
+        right--;
+      } else if (currentSum < targetSum) {
+        left++;
+      } else if (currentSum > targetSum) {
+        right--;
+      }
+    }
+  }
+
+  return triplets;
+};
+
+export const threeNumberSumAlmost = (
   array: number[],
   targetSum: number
 ): Triplet[] => {
@@ -43,7 +73,7 @@ export const threeNumberSum = (
       for (const secondaryMatch of secondaryMatches) {
         const completeMatch: number[] = [num, ...secondaryMatch];
         completeMatch.sort((a: number, b: number) => a - b);
-        matches.push(completeMatch);
+        // matches.push(completeMatch);
       }
     }
   }
