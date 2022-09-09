@@ -23,11 +23,8 @@ export const threeNumberSum = (
         triplets.push([array[i], array[left], array[right]]);
         left++;
         right--;
-      } else if (currentSum < targetSum) {
-        left++;
-      } else if (currentSum > targetSum) {
-        right--;
-      }
+      } else if (currentSum < targetSum) left++;
+      else if (currentSum > targetSum) right--;
     }
   }
 
