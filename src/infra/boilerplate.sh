@@ -1,7 +1,7 @@
 #!/bin/sh
 
-DIR=$1
-PROBLEM=$2
+DIR="medium"
+PROBLEM=$1
 
 TS=./src/"$DIR"/"$PROBLEM".ts
 TS_TEST=./src/"$DIR"/"$PROBLEM".test.ts
