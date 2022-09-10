@@ -11,14 +11,15 @@ export const smallestDifference = (
   arrayOne.sort((a, b) => a - b);
   arrayTwo.sort((a, b) => a - b);
 
-  const length: Length = arrayOne.length;
+  const lengthOne: Length = arrayOne.length;
+  const lengthTwo: Length = arrayTwo.length;
   let idxOne: Index = 0;
   let idxTwo: Index = 0;
   let smallest: number = inf;
   let currentDiff: number = inf;
   let smallestPair: Pair = [arrayOne[0], arrayTwo[0]];
 
-  while (idxOne < length && idxTwo < length) {
+  while (idxOne < lengthOne && idxTwo < lengthTwo) {
     const firstNum = arrayOne[idxOne];
     const secondNum = arrayTwo[idxTwo];
 
