@@ -23,6 +23,10 @@
             "console.log(\"--------------------------------------\");"
         ]
     },
+    "Time and Space Complexity": {
+        "prefix": "compl",
+        "body": "// O($1) T | O($2) S"
+    },
     "type Index": {
         "prefix": "type_index",
         "body": "type Index = number;"

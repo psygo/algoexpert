@@ -18,6 +18,6 @@ describe("Smallest Difference", () => {
           [1005, 1006, 1014, 1032, 1031]
         )
       )
-      .to.deep.equal([28, 26]);
+      .to.deep.equal([2000, 1032]);
   });
 });
