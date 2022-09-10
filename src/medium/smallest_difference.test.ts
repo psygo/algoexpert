@@ -9,4 +9,15 @@ describe("Smallest Difference", () => {
       )
       .to.deep.equal([28, 26]);
   });
+
+  it("Test Case #2", function () {
+    chai
+      .expect(
+        smallestDifference(
+          [10, 0, 20, 25, 2000],
+          [1005, 1006, 1014, 1032, 1031]
+        )
+      )
+      .to.deep.equal([28, 26]);
+  });
 });
