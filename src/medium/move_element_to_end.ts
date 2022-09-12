@@ -13,16 +13,21 @@ export const moveElementToEnd = (array: number[], toMove: number): number[] => {
       array[bottomEnd] = currentNum;
       array[i] = toMove;
       bottomEnd++;
-    } else {
+    } else if (currentNum === toMove) {
       lastToMove = i;
+      bottomEnd = i;
     }
 
     console.log("--------------------------------------");
     console.log("Index: ", i);
-    console.log(array);
-    console.log(bottomEnd);
+    console.log("Current Num: ", currentNum);
+    console.log("Last to Move: ", lastToMove);
+    console.log("Array: ", array);
+    console.log("Bottom End: ", bottomEnd);
     console.log("--------------------------------------");
   }
+
+  console.log("Final Array: ", array);
 
   return array;
 };

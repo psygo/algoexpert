@@ -15,7 +15,7 @@ describe("Move Element to End", () => {
   // });
 
   it("Test Case #2", function () {
-    const array = [1, 2, 4, 5, 3];
+    const array = [1, 2, 3, 4, 5];
     const toMove = 3;
     const expectedStart = [1, 2, 4, 5];
     const expectedEnd = [3];
